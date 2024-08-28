@@ -10,18 +10,18 @@ import Button from 'primevue/button';
 import 'primeicons/primeicons.css'; 
 import { ref } from 'vue';
 
-const time = ref(null); // Время, выбранное пользователем
+const time = ref(null); 
 const texx = ref(""); 
 
-// Обработчик клика на кнопку
+
 function handleButtonClick() {
   if (time.value) {
-    const date = new Date(time.value); // Создаем новый объект Date
-    const hours = date.getHours(); // Получаем часы
-    const minutes = date.getMinutes(); // Получаем минуты
-    texx.value = `Часы: ${hours}, Минуты: ${minutes}`; // Выводим часы и минуты в консоль
+    const date = new Date(time.value); 
+    const hours = date.getHours(); 
+    const minutes = date.getMinutes(); 
+    texx.value = `Часы: ${hours}, Минуты: ${minutes}`; 
   } else {
-    console.log('Время не выбрано'); // Выводим, если время не выбрано
+    console.log('Время не выбрано'); 
   }
 }
 </script>
